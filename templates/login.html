@@ -1,0 +1,49 @@
+{% extends "base.html"%}
+
+{% block middel %}
+  <div class="wrapper">
+    <header>
+      <h1>Webshop</h1>
+      <p>login</p>
+    </header>
+    <div class="middel">
+      <nav>
+        <ul>
+          <li><h2>login</h2></li>
+        </ul>
+      </nav>
+      <section>
+        <h1>sign up here</h1>
+        <br>
+        <form action="/verwerkFormulier" method="POST">
+          <div>
+            <label for="name">full Name:</label>
+            <span>&nbsp;</span>
+            <input type="text" id="name" name="gebruikersnaam">
+          </div>
+          <br>
+          <div>
+            <label for="mail">E-mail:</label>
+            <span>&nbsp;</span>
+            <input type="text" id="mail" name="gebruikersemail">
+          </div>
+          <br>
+          <div>
+            <input type="radio" name="gender" value="male" class="checker"> Male<br>
+            <input type="radio" name="gender" value="female" class="checker"> Female<br>
+            <input type="radio" name="gender" value="other" checked class="checker"> Other
+          </div>
+          <br>
+          <div>
+            <label for="msg">Message:</label>
+            <textarea id="msg" name="bericht"></textarea>
+          </div>
+          <br>
+          <div>
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+{% endblock %}
